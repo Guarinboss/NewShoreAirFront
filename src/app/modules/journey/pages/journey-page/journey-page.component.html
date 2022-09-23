@@ -1,0 +1,20 @@
+<div class="intro-box">
+    <div class="intro img">
+        <h1 class="intro-title-name">NEWSHORE AIR</h1>
+        <app-search-flight></app-search-flight>
+        <b *ngIf="(loading$ | async )">Cargando...</b>
+    </div>
+    
+</div>
+<app-flight-routes style="width: 100%;"></app-flight-routes>
+<!--<div class="social-links-box">
+
+    <p>&#169; Created by Alejandro Cuaran</p>
+
+    <div style="margin-right: 1rem;">
+        <img onclick="window.open('https://www.linkedin.com/in/alejandro-cuaran-b94765215/', '_blank');"
+            src="../../assets/img/linkedin-icon.png" alt="">
+    </div>
+
+
+</div>-->

@@ -1,0 +1,52 @@
+.format-specification{
+    display: flex;
+    justify-content: center;
+}
+
+.card-destination{
+    background-color: #7e1bcc;
+    min-width: 70%;
+    margin-top: 35px;
+    padding: 20px;
+}
+
+.group-destination{
+    color: white;
+    font-weight: bold;
+
+}
+
+.mywork-btn {
+    border-radius: 8px;
+    backdrop-filter: blur(20px);
+    background-color: rgb(255, 255, 255, 0.5);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    padding: 14px;
+    width: 137px;
+    cursor: pointer;
+    height: 45px;
+    margin-left: 6px;
+    transform: translateY(-4px);
+    margin-right: -5px;
+    
+}
+
+.mywork-btn:hover {
+    background-color: #7e1bcc;
+    transition: .5s;
+    transform: scale(1.2);
+    font-weight: bold;
+    transform: translateY(-4px);
+}
+
+.currency-btn{
+    margin-right: 5px;
+    height: 50px;
+    transform: translateY(-5px);
+}
+
+
+
+

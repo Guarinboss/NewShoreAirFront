@@ -1,0 +1,50 @@
+<div style="display: flex; justify-content: space-evenly; flex-wrap: wrap;">
+    <mat-card *ngFor="let item of filteredFlights"
+        style="max-width: 950px; margin: 20px; background-color: rgba(255, 255, 255, 0.205)">
+        <img mat-card-image src="/assets/img/backgroundCard.jpg" alt="Photo of {{item.title}}"
+            style="object-fit: contain">
+        <mat-card-header class="header-content">
+            <div class="route-info position-from-text">From: </div>
+            <div class="route-text position-origin-text">{{item.departureStation}}</div>
+            <mat-icon class="icon-position">connecting_airports</mat-icon>
+            <div class="route-info position-to-text">To:</div>
+            <div class="route-text position-destination-text">{{item.arrivalStation}}</div>
+        </mat-card-header>
+
+        <mat-card-content class="card-content">
+            <p>
+                <mat-icon>flight_takeoff</mat-icon>
+                From: {{item.departureStation}}
+            </p>
+            <p>
+                <mat-icon>flight_land</mat-icon>
+                To: {{item.arrivalStation}}
+            </p>
+            <p>
+                <mat-icon>payments</mat-icon>
+                Price: {{item.price | currencyExchange | async}} {{currentCurrency}}
+            </p>
+            <p>
+                <mat-icon>flight</mat-icon>
+                flightCarrier: {{item.flightCarrier}}
+            </p>
+            <p>
+                <mat-icon>confirmation_number</mat-icon>
+                flightNumber: {{item.flightNumber}}
+            </p>
+        </mat-card-content>
+    </mat-card>
+
+    <div *ngIf="filterNull" class="divi">
+        <section class="error-container">
+            <span><span>¡</span></span>
+            <span>OOPS</span>
+            <span><span>!</span></span>
+        </section>
+        <p class="zoom-area"><b>Sin resultados</b></p>
+        <p class="zoom-area"><b>No se encontraron rutas para la búsqueda</b></p>
+        <div class="link-container">
+        </div>
+        <br><br>
+    </div>
+</div>
